@@ -91,7 +91,7 @@ export default function Carousel() {
             </AnimatePresence>
           </div>
           <div>
-            <div className="r absolute inset-x-0 bottom-6 flex justify-center overflow-hidden">
+            <div className="r absolute inset-x-0 bottom-6 flex justify-center">
               <motion.div className="flex h-14 w-24 justify-center gap-1">
                 {images.map((image, i) => (
                   <motion.button
@@ -99,9 +99,10 @@ export default function Carousel() {
                     variants={{
                       active: {
                         aspectRatio: expandedAspectRatio,
-                        marginLeft: 10,
-                        marginRight: 10,
+                        marginLeft: 5,
+                        marginRight: 5,
                         opacity: 1,
+                        scale: 1.1,
                       },
                       inactive: {
                         aspectRatio: collapsedAspectRatio,
@@ -110,7 +111,13 @@ export default function Carousel() {
                         opacity: 0.8,
                       },
                     }}
-                    whileHover={{ aspectRatio: 3 / 2, opacity: 1 }}
+                    whileHover={{
+                      aspectRatio: 3 / 2,
+                      opacity: 1,
+                      scale: 1.3,
+                      marginLeft: 15,
+                      marginRight: 15,
+                    }}
                     onClick={() => setIndex(i)}
                     className={` h-full shrink-0`}
                     key={image}
