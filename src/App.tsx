@@ -7,7 +7,7 @@ import ResizablePanel from "./routes/resizablePanel";
 import Calendar from "./routes/calendar";
 
 function App() {
-  return <Carousel />;
+  return <ResizablePanel />;
 }
 
 export default App;
