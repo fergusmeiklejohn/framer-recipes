@@ -116,7 +116,7 @@ export default function Calendar() {
                             onClick={() => console.log(day)}
                             className={`${
                               isSameMonth(day, month) ? "" : "text-stone-300"
-                            } cursor-pointer rounded-full py-3 px-4 font-semibold hover:bg-sky-200`}
+                            }  cursor-pointer rounded-full py-1 font-semibold hover:ring-2 hover:ring-blue-300`}
                             key={format(day, "yyyy-MM-dd")}
                           >
                             {format(day, "d")}
